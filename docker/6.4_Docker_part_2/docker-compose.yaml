@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+networks:
+  balashovdi-my-netology-hw:
+    driver: bridge    
+    ipam:      
+      config:      
+        - subnet: 172.22.0.0/24 
+

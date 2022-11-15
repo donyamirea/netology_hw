@@ -1,0 +1,15 @@
+zabbix-server:
+    image: zabbix/zabbix-server-pgsql
+    links:
+      - PGSQL_DB
+    container_name: Zabbix-server
+    environment:
+      DB_SERVER_HOST: '172.22.0.10'
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: balashovdi12!3!!
+    ports:
+      - 10051:10051
+    networks:
+      balashovdi-my-netology-hw:
+        ipv4_address: 172.22.0.30
+    restart: always

@@ -1,0 +1,19 @@
+zabbix_wgui:
+  image: zabbix/zabbix-web-apache-pgsql
+  links:
+    - PGSQL_DB
+    - zabbix-server
+  container_name: balashovdi-netology-zabbix-frontend
+  environment:
+    DB_SERVER_HOST: '172.22.0.10'
+    POSTGRES_USER: 'postgres'
+    POSTGRES_PASSWORD: balashovdi12!3!!
+    ZBX_SERVER_HOST: "zabbix_wgui"
+    PHP_TZ: "Europe/Moscow"
+  ports:
+    - 80:8080
+    - 443:8443
+  networks:
+    balashovdi-my-netology-hw:
+      ipv4_address: 172.22.0.40
+  restart: always

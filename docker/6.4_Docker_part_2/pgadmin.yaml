@@ -1,0 +1,12 @@
+pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgAdmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: balashovdi@mymail.ru
+      PGADMIN_DEFAULT_PASSWORD: 123
+    ports:
+      - 61231:80
+    networks:
+      balashovdi-my-netology-hw:
+        ipv4_address: 172.22.0.20
+    restart: always
