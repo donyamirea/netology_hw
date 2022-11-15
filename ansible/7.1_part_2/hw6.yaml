@@ -1,0 +1,35 @@
+---
+- name: task 5
+  hosts: hosts
+  vars:
+  - myvar_ipaddr: "{{ ansible_facts.enp0s3.ipv4.address }}"
+  - myvar_hostname: "{{ ansible_hostname }}"
+  tasks:
+
+  - name: task 5 part 3.0.1 - clear destination MOTD-file
+    ansible.builtin.file:
+      path: /etc/motd
+      state: absent
+    become: yes
+
+  - name: task 5 par 3.0.2 - make empty file
+    ansible.builtin.shell: echo '' > /etc/motd
+    become: yes
+
+  - name: task 5 part 3.1.1 - write host.IP to MOTD-file
+    ansible.builtin.lineinfile:
+      path: /etc/motd
+      line: "{{ myvar_ipaddr }}"
+    become: yes
+
+  - name: task 5 part 3.1.2 - write hostname to MOTD-file
+    ansible.builtin.lineinfile:
+      path: /etc/motd
+      line: "{{ myvar_hostname }}"
+    become: yes
+
+  - name: task 5 part 3.1.3 - write good wishes to MOTD-file
+    ansible.builtin.lineinfile:
+      path: /etc/motd
+      line: "Hope you will have a nice day without any wierd tickets! 	(〃＾▽＾〃)"
+    become: yes

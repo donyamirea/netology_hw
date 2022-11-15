@@ -1,0 +1,60 @@
+---
+- name: task 5
+  hosts: hosts
+  vars:
+  - myvar: "{{ ansible_facts.enp0s3.ipv4.address }}"
+  #become: yes
+  tasks:
+  - name: create dir for downloaded archive
+    ansible.builtin.file: 
+      path: /tmp/5.2_downloaded
+      state: directory
+      mode: '0777'
+
+  - name: Download archive from kafka's website
+    ansible.builtin.get_url:
+      url: https://downloads.apache.org/kafka/3.3.1/kafka-3.3.1-src.tgz
+      dest: /tmp/5.2_downloaded
+
+  - name: create dir for extraction
+    ansible.builtin.file: 
+      path: /tmp/5.2_extracted
+      state: directory
+      mode: '0777'
+
+  - name: extract archive
+    ansible.builtin.unarchive:
+      src: /tmp/5.2_downloaded/kafka-3.3.1-src.tgz
+      dest: /tmp/5.2_extracted/
+      remote_src: yes
+  
+  - name: list extracted files in subdirectory
+    ansible.builtin.find:
+      paths: /tmp/5.2_extracted/
+      recurse: yes
+
+  - name: task 5 part 2 - install 'tuned' app and make it autoloadable  
+    apt:
+      name: tuned
+      update_cache: yes
+    become: yes
+
+  - name: "task 5 part 2: make 'tuned' autoloadable"
+    ansible.builtin.command: systemctl enable tuned
+    become: yes
+
+  - name: task 5 part 3.0.1 - clear destination MOTD-file
+    ansible.builtin.file:
+      path: /etc/motd
+      state: absent
+    become: yes
+
+  - name: task 5 par 3.0.2 - make empty file
+    ansible.builtin.shell: echo '' > /etc/motd
+    become: yes
+
+  - name: task 5 part 3.1 - change MOTD using variables
+    ansible.builtin.lineinfile:
+      path: /etc/motd
+      line: "{{ myvar }}"
+    become: yes

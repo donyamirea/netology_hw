@@ -1,0 +1,12 @@
+---
+- name: hw7
+  hosts: hosts
+  become: yes
+  vars:
+  - myvar_ipaddr: "IP address: {{ ansible_facts.enp0s3.ipv4.address }}<br>"
+  - myvar_cpu: "CPU info: {{ ansible_processor }}<br>"
+  - myvar_ram: "RAM info: {{ ansible_memtotal_mb }}<br>"
+  - myvar_hdd: "HDD info: {{ ansible_devices.sda.size }}"
+
+  roles:
+  - hw7_role 
