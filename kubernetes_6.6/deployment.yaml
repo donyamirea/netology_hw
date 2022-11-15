@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,13 +15,13 @@ spec:
     spec:
       containers:
       - name: master
-        image:bitnami/redis
+        imge: {{ .Values.image.repository }}
         env:
          - name: REDIS_PASSWORD
            value: password123
         ports:
-        - containerPort: 6379
+        - containerPort: {{ .Values.service.targetPort }}
       tolerations:
         - key: "key"
           operator: "Exists"
-          effect: "NoSchedule"
+          effect: "NoSchedule"a

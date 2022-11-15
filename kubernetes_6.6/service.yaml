@@ -1,19 +1,14 @@
-apiVersion: v1
-kind: Service
+apiVersion: v1                                                                                            kind: Service
 metadata:
   name: myredis-my-project
   labels:
-    helm.sh/chart: my-project-0.1.0
-    app.kubernetes.io/name: my-project
-    app.kubernetes.io/instance: myredis
-    app.kubernetes.io/version: "1.16.0"
-    app.kubernetesio/managed-by: Helm
+    app: redis
 spec:
   type: ClusterIP
   ports:
-    - port: 6379
-      targetPort: 54321
+    - port: {{ .Values.service.taretPort }}
+      targetPort: {{ .Values.service.port }}
       protocol: TCP
   selector:
     app.kubernetes.io/name: my-project
-    app.kubernetes.io/instance: myredis
+    app.kubernetes.io/instance: myredisg
