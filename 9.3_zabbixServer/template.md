@@ -4,8 +4,8 @@
 Создайте свой шаблон, в котором будут элементы данных, мониторящие закгрузку CPU и RAM хоста.
 Приведите скриншот вкладки Items вашего шаблона.
 
-`![image](https://user-images.githubusercontent.com/117297288/212138989-c4bc1476-623e-42e0-a3cc-14170d98220f.png)`
-`![image](https://user-images.githubusercontent.com/117297288/212139125-9f1deed7-4100-4612-bda7-5ddfccfdb769.png)`
+![image](https://user-images.githubusercontent.com/117297288/212138989-c4bc1476-623e-42e0-a3cc-14170d98220f.png)
+![image](https://user-images.githubusercontent.com/117297288/212139125-9f1deed7-4100-4612-bda7-5ddfccfdb769.png)
 
 ---
 
