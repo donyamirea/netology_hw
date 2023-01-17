@@ -4,7 +4,7 @@
 Установите Prometheus.
 Приведите скриншот systemctl status prometheus, где будет написано prometheus.service - Prometheus Service Netology Lesson 9.4 - [Ваши ФИО]
 
-`Ответ [ссылка на источник|скриншот (можно добавлять через гитхаб - автоматом генерится линк)](http://example.com)`
+![image](https://user-images.githubusercontent.com/117297288/212824144-09eb359f-503d-4cd0-88c7-c55876e3de64.png)
 ---
 
 ### Задание 2
