@@ -10,7 +10,8 @@
 ### Задание 2
 Установите Node Exporter.
 Приведите скриншот systemctl status node-exporter, где будет написано node-exporter.service - Node Exporter Netology Lesson 9.4 - [Ваши ФИО]
-`Ответ [ссылка на источник|скриншот (можно добавлять через гитхаб - автоматом генерится линк)](http://example.com)`
+
+![image](https://user-images.githubusercontent.com/117297288/212826116-0ed41f7e-5bdf-41e1-b596-e48df4965442.png)
 ---
 ### Задание 3
 Подключите Node Exporter к серверу Prometheus.
