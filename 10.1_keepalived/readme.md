@@ -24,3 +24,4 @@ virtual_ipaddress {
 Пришлите скриншот рабочей конфигурации и состояния сервиса для каждого нода.
 
 ![image](https://user-images.githubusercontent.com/117297288/217889064-2d3f287e-a0ae-46a3-b91a-e2ca457b3367.png)
+![image](https://user-images.githubusercontent.com/117297288/217889710-eaec3ab4-c277-4ab2-8be6-c5c50fd71f17.png)
