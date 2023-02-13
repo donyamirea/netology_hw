@@ -26,13 +26,13 @@
 Установите и запустите Haproxy.
 Приведите скриншот systemctl status haproxy, где будет видно, что Haproxy запущен.
 
-`![image](https://user-images.githubusercontent.com/117297288/218560923-88c8254a-c677-4041-9a75-542ba7106896.png)`
+`[image](https://user-images.githubusercontent.com/117297288/218560923-88c8254a-c677-4041-9a75-542ba7106896.png)`
 ---
 ### Задание 4
 Установите и запустите Nginx.
 Приведите скриншот systemctl status nginx, где будет видно, что Nginx запущен.
 
-`![image](https://user-images.githubusercontent.com/117297288/218560771-9ef37c7f-a77c-4a00-af58-e37a33d009c9.png)`
+`[image](https://user-images.githubusercontent.com/117297288/218560771-9ef37c7f-a77c-4a00-af58-e37a33d009c9.png)`
 ---
 ### Задание 5
 Настройте Nginx на виртуальной машине таким образом, чтобы при запросе: curl http://localhost:8088/ping
@@ -42,9 +42,9 @@
 
 ```
 Я добавил блок в дефолтный конфиг. Думаю, нет смысла приводить его полностью :) 
-![image](https://user-images.githubusercontent.com/117297288/218562170-5cd56b94-eecc-44af-9a43-109f12e7e7f0.png)
+[image](https://user-images.githubusercontent.com/117297288/218562170-5cd56b94-eecc-44af-9a43-109f12e7e7f0.png)
 
 Вывод состояния службы:
-![image](https://user-images.githubusercontent.com/117297288/218561943-b75c637b-35e4-44f2-bf39-8f2b32f63951.png)
+[image](https://user-images.githubusercontent.com/117297288/218561943-b75c637b-35e4-44f2-bf39-8f2b32f63951.png)
 ```
 ---
