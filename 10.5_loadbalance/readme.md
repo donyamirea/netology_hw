@@ -41,9 +41,9 @@
 Приведите конфигурации настроенного Nginx сервиса и скриншот результата выполнения команды curl http://localhost:8088/ping.
 
 `Я добавил блок в дефолтный конфиг. Думаю, нет смысла приводить его полностью :)`
-[image](https://user-images.githubusercontent.com/117297288/218562170-5cd56b94-eecc-44af-9a43-109f12e7e7f0.png)
+![image](https://user-images.githubusercontent.com/117297288/218562170-5cd56b94-eecc-44af-9a43-109f12e7e7f0.png)
 
 `Вывод состояния службы:`
-[image](https://user-images.githubusercontent.com/117297288/218561943-b75c637b-35e4-44f2-bf39-8f2b32f63951.png)
+![image](https://user-images.githubusercontent.com/117297288/218561943-b75c637b-35e4-44f2-bf39-8f2b32f63951.png)
 
 ---
