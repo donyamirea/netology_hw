@@ -7,9 +7,9 @@ terraform {
   required_version = ">= 0.13"
 }
 provider "yandex" {
-        token ="y0_AgAAAAACjPsQAATuwQAAAADT5MAT4kYVmHoeRbWCv0ZW7jMHcoh7J-w"
-#        cloud_id = "b1gkfg8kpgehj6dh6r88"
-        folder_id = "b1gkfg8kpgehj6dh6r88"
+        token ="XXX"
+#        cloud_id = "XXX"
+        folder_id = "XXX"
         zone = "ru-central1-a"
 }
 data "template_file" "user_data" {
