@@ -1,0 +1,23 @@
+#cloud-config
+users:
+ - name: user
+   groups: sudo
+   shell: /bin/bash
+   sudo: ['ALL=(ALL) NOPASSWD:ALL']
+   ssh-authorized-keys:
+     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDd5n/nyTP/MUhXDs5P1aLfbvt/k9hjXuyJ7NU6gEyzBaIGx+1JlLnQA+D/U96hLq/8lTLxxOfrbQ5w5MeobCGvORq22zR8vVMs0zDsr+GHOH56nY2WN3zctk7I+up8mdZ8YTSUUxGqOeqy9b4vTPvZaP+BCMC1qqBdNMH1SWlnWPWlJOsN/izn/zcAYrMF4E3jP8144dSx5bxSIamX2RiK3HiK2dcHk3Q8ckVIl99gCeg9Uz261mtMT/H28sU/E4Raj/OxqgWM/wQMPP6HKa+k2RwgSuDcSnDdvmOaFNadVdutPyOCqHRLjuD9qILEI7muLFifggV1TUHa6d6S8O2v bdi@deb10
+
+packages:
+ - nginx
+#bootcmd:
+# sudo rm /etc/nginx/sites-enabled/default
+write_files:
+  - content: ${indexfile}
+    owner: root:root
+    path: /var/www/html/index.html
+  - content: ${nginxfile}
+    encoding: b64
+    owner: root:root
+    path: /etc/nginx/sites-enabled/default
+#bootcmd:
+#  - systemctl restart nginx
