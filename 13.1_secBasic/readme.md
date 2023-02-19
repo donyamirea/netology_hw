@@ -15,7 +15,7 @@
 `Ответ`
 ---
 
-1. Вывод 'nmap -sV target:
+1. Вывод 'nmap -sV target':
 ```
 PORT     STATE SERVICE     VERSION
 21/tcp   open  ftp         vsftpd 2.3.4
