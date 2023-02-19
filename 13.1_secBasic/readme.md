@@ -41,9 +41,9 @@ PORT     STATE SERVICE     VERSION
 8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
 
 2. Уязвимости на основании сайта https://exploit-db.com:
-- [vsftpd 2.3.4 - Backdoor Command Execution](https://www.exploit-db.com/exploits/49757)
-- [PostgreSQL 8.3.6 - Conversion Encoding Remote Denial of Service](https://www.exploit-db.com/exploits/32849)
-- [OpenSSH 2.3 < 7.7 - Username Enumeration](https://www.exploit-db.com/exploits/45233)
+[vsftpd 2.3.4 - Backdoor Command Execution](https://www.exploit-db.com/exploits/49757)
+[PostgreSQL 8.3.6 - Conversion Encoding Remote Denial of Service](https://www.exploit-db.com/exploits/32849)
+[OpenSSH 2.3 < 7.7 - Username Enumeration](https://www.exploit-db.com/exploits/45233)
 ```
 
 ---
