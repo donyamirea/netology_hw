@@ -30,7 +30,9 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 Использую debian 10
 
 1.1 Установил через контейнер докера, https://hub.docker.com/_/mysql
+
 1.2 CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'qwe123';
+
 1.3 
 ```sql
 mysql> select user from user;
