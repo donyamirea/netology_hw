@@ -8,6 +8,7 @@ select distinct district
 from address
 where district like 'K%a' AND district not like '% %';
 ```
+![image](https://user-images.githubusercontent.com/117297288/220861942-6dba522b-adbf-40a6-81db-6d2e3a7e1b1b.png)
 
 ---
 
@@ -19,6 +20,7 @@ select *
 from payment
 where payment_date >= '2005-06-15 00:00:00' AND payment_date < '2005-06-19 00:00:00' AND amount > 10;
 ```
+![image](https://user-images.githubusercontent.com/117297288/220862053-df62aeae-5071-40df-8efb-8f6cd69deb89.png)
 
 ---
 ### Задание 3
@@ -28,10 +30,10 @@ where payment_date >= '2005-06-15 00:00:00' AND payment_date < '2005-06-19 00:00
 select *
 from rental
 order by rental_date
-desc;
+desc
+limit 5;
 ```
-
-
+![image](https://user-images.githubusercontent.com/117297288/220862414-e616f48a-00ee-4d55-80ec-41a3c9d2e64d.png)
 
 ---
 ### Задание 4
@@ -51,6 +53,8 @@ select *
 from customer 
 where first_name='KELLY' or first_name='WILLIE' and active=1;
 ```
+![image](https://user-images.githubusercontent.com/117297288/220862509-0ad01700-4d39-4d23-af5c-db6bcc91e0cf.png)
+
 
 # Отредактированный вывод 
 ```sql
@@ -60,3 +64,4 @@ select first_name, last_name,
 from customer 
 where first_name='KELLY' or first_name='WILLIE' and active=1;
 ```
+![image](https://user-images.githubusercontent.com/117297288/220862546-5d265b7e-600b-4203-912c-0c9d34e45d3c.png)
