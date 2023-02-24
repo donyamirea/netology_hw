@@ -21,6 +21,8 @@ GROUP BY rental.staff_id, city.city, staff.first_name, staff.last_name
 HAVING COUNT(DISTINCT rental.customer_id) > 300
 ORDER BY Store;
 ```
+![image](https://user-images.githubusercontent.com/117297288/221138541-97a4256d-2d1d-484a-ae85-e9a3c91af046.png)
+
 
 ---
 
@@ -32,9 +34,11 @@ select count(title)
 from film
 where length > (
 	select avg(length)
-    from film
+    	from film
 );
 ```
+![image](https://user-images.githubusercontent.com/117297288/221138679-c035a9dd-2951-401e-a919-5eaa2bcb3658.png)
+
 
 ---
 ### Задание 3
@@ -49,3 +53,4 @@ group by date_format(payment_date, '%Y-%m')
 order by sum(amount) desc
 limit 1;
 ```
+![image](https://user-images.githubusercontent.com/117297288/221138593-4eea400e-8e4c-469d-9c46-74f788d627cc.png)
