@@ -72,3 +72,5 @@ group by customer.customer_id, customer.last_name, customer.first_name;
 ```sql
 -> Index lookup on payment using index_payment_date (payment_date=rental.rental_date), with index condition: (cast(payment.payment_date as date) = '2005-07-30')  (cost=0.25 rows=1) (actual time=0.001..0.001 rows=0 loops=16044)
 ```
+
+![image](https://user-images.githubusercontent.com/117297288/221241959-49fddc9f-5277-4d5f-adaa-48206df6337f.png)
