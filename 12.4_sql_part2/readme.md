@@ -8,18 +8,18 @@
 - количество пользователей, закреплённых в этом магазине.
 
 ```sql
-SELECT DISTINCT rental.staff_id AS Store, staff.last_name as 'Фамилия', staff.first_name as 'Имя',city.city AS City, COUNT(DISTINCT rental.customer_id) AS Customers
-FROM rental
-INNER JOIN inventory ON rental.inventory_id = inventory.inventory_id
-INNER JOIN store ON inventory.store_id = store.store_id
-INNER JOIN address ON store.address_id = address.address_id
-INNER JOIN city ON address.city_id = city.city_id
-INNER JOIN staff ON rental.staff_id = staff.staff_id
-WHERE rental.staff_id BETWEEN 1 AND 2
-  AND city.city IN ('Lethbridge', 'Woodridge') -- Здесь нужно указать имена городов, например, 'New York' или 'Los Angeles'
-GROUP BY rental.staff_id, city.city, staff.first_name, staff.last_name
-HAVING COUNT(DISTINCT rental.customer_id) > 300
-ORDER BY Store;
+select customer.store_id,
+	   concat(staff.first_name, ' ', staff.last_name),
+	   city.city,
+	   count(customer.customer_id)       
+from customer
+	join staff on customer.store_id = staff.store_id
+	join store on staff.store_id = store.store_id
+	join address on store.address_id = address.address_id
+    join city on address.city_id = city.city_id
+where customer.active=1 
+group by customer.store_id, staff.first_name, staff.last_name, city.city
+having count(customer.customer_id) > 300;
 ```
 ![image](https://user-images.githubusercontent.com/117297288/221138541-97a4256d-2d1d-484a-ae85-e9a3c91af046.png)
 
