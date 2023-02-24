@@ -21,7 +21,8 @@ where customer.active=1
 group by customer.store_id, staff.first_name, staff.last_name, city.city
 having count(customer.customer_id) > 300;
 ```
-![image](https://user-images.githubusercontent.com/117297288/221138541-97a4256d-2d1d-484a-ae85-e9a3c91af046.png)
+![image](https://user-images.githubusercontent.com/117297288/221174935-bf88bca7-21b2-4989-b04f-2dc57dc7e457.png)
+
 
 
 ---
