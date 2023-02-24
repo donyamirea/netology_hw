@@ -42,7 +42,7 @@ from payment
 	 join inventory on rental.inventory_id = inventory.inventory_id
 	 join film on inventory.film_id = film.film_id
 where date(payment.payment_date) = '2005-07-30' 
-	  and payment.payment_date = rental.rental_date 
+      and payment.payment_date = rental.rental_date 
       and rental.customer_id = customer.customer_id 
       and inventory.inventory_id = rental.inventory_id
 group by customer.customer_id, customer.last_name, customer.first_name;
