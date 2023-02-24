@@ -49,3 +49,26 @@ group by customer.customer_id, customer.last_name, customer.first_name;
 ```
 ![image](https://user-images.githubusercontent.com/117297288/221184436-ab5ad6f4-28b8-414e-b710-4be7fc722c5c.png)
 
+## Попросили доработать, добавив индекс/-ы
+
+```sql
+create index index_payment_date on payment (payment_date);
+
+explain analyze
+select concat(customer.last_name, ' ', customer.first_name),
+	   sum(payment.amount)
+from payment
+	 join rental on payment.payment_date = rental.rental_date
+	 join customer on rental.customer_id = customer.customer_id
+	 join inventory on rental.inventory_id = inventory.inventory_id
+	 join film on inventory.film_id = film.film_id
+where date(payment.payment_date) = '2005-07-30' 
+	  and payment.payment_date = rental.rental_date 
+      and rental.customer_id = customer.customer_id 
+      and inventory.inventory_id = rental.inventory_id
+group by customer.customer_id, customer.last_name, customer.first_name;
+```
+
+```sql
+-> Index lookup on payment using index_payment_date (payment_date=rental.rental_date), with index condition: (cast(payment.payment_date as date) = '2005-07-30')  (cost=0.25 rows=1) (actual time=0.001..0.001 rows=0 loops=16044)
+```
