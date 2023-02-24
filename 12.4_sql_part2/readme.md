@@ -16,7 +16,7 @@ from customer
 	join staff on customer.store_id = staff.store_id
 	join store on staff.store_id = store.store_id
 	join address on store.address_id = address.address_id
-    join city on address.city_id = city.city_id
+   	join city on address.city_id = city.city_id
 where customer.active=1 
 group by customer.store_id, staff.first_name, staff.last_name, city.city
 having count(customer.customer_id) > 300;
