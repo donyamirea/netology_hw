@@ -8,6 +8,7 @@ select sum(index_length) / sum(data_length) * 100 as index_to_table_ratio
 from information_schema.tables
 where table_schema = 'sakila';
 ```
+![image](https://user-images.githubusercontent.com/117297288/221184857-0c9aebae-507f-45a8-ad34-c1bd3a2cbfc8.png)
 
 ---
 
@@ -30,7 +31,7 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 - оптимизируйте запрос: внесите корректировки по использованию операторов, при необходимости добавьте индексы.
 
 1. Вместо указания таблиц во 'from' перечислю их в 'join'. Считаю , что так будет правильнее, ведь основной запрос идет к 'payment', а другие данные подтягиваются как связанные.
-2. Т.к. в блоке 'where' есть данные для отбора, считаю, что блок 'sum() over()' можно изменить на просто 'sum()' - это должно сократить время выборки (и сократило)
+2. Т.к. в блоке 'where' есть данные для отбора, считаю, что блок 'sum() over()' можно изменить на просто 'sum()' - это должно сократить время выборки (и сократило: на скриншоте ниже последние 2 строки это контрольный замер разницы во времени выполнения. Также на нем видно, что возвращается то же количество строк, что и ранее, а значит, я не изменил выборку, а только оптимизировал время выполнения)
 
 ```sql
 select concat(customer.last_name, ' ', customer.first_name),
@@ -46,3 +47,5 @@ where date(payment.payment_date) = '2005-07-30'
       and inventory.inventory_id = rental.inventory_id
 group by customer.customer_id, customer.last_name, customer.first_name;
 ```
+![image](https://user-images.githubusercontent.com/117297288/221184436-ab5ad6f4-28b8-414e-b710-4be7fc722c5c.png)
+
