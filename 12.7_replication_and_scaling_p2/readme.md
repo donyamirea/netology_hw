@@ -37,3 +37,4 @@
 
 - Вертикальный шардинг
 
+![image](https://user-images.githubusercontent.com/117297288/221373046-d1ac8055-c1bd-454c-b7d0-10837f154c37.png)
