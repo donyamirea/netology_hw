@@ -44,6 +44,7 @@
 
 Приведите ответ в свободной форме.
 
+## Ответ
 [В оффициальной доке](https://dev.mysql.com/doc/mysql-enterprise-backup/8.0/en/mysqlbackup.incremental.html) есть указания на использование mysqlbackup, но такого испольняемого файла нет вместе с установкой 8 версии. Есть 'mysqldump'
 
 `Related mysqlbackup options are --incremental, --incremental-with-redo-log-only, --incremental-backup-dir, --incremental-base, and --start-lsn.`
