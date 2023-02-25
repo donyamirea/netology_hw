@@ -33,7 +33,7 @@
 
 - Горизонтальный шардинг
 
-![image](https://user-images.githubusercontent.com/117297288/221371981-a7ecc629-734e-4672-aab0-b883c0d2ebda.png)
+![image](https://user-images.githubusercontent.com/117297288/221372545-ef125c93-99e1-4bc3-a309-d298374a1751.png)
 
 - Вертикальный шардинг
 
