@@ -32,6 +32,7 @@
 Делал в draw.io, файлы во вложении.
 
 - Горизонтальный шардинг
-![image](https://user-images.githubusercontent.com/117297288/221371981-a7ecc629-734e-4672-aab0-b883c0d2ebda.png)
+
+![image](https://user-images.githubusercontent.com/117297288/221372526-049af899-a6b1-4d6d-91f1-439e07675ba9.png)
 
 - Вертикальный шардинг
