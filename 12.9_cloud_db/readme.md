@@ -85,3 +85,5 @@ select * from test_table;
 
 
 ## Ответ
+![image](https://user-images.githubusercontent.com/117297288/221369210-c11b2f63-55f4-4e58-b64d-5887175710ba.png)
+
