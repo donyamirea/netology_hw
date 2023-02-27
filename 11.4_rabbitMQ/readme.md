@@ -45,20 +45,46 @@ $ cat /etc/hosts
 
 Затем объедините две машины в кластер и создайте политику ha-all на все очереди.
 
-*В качестве решения домашнего задания приложите скриншоты из веб-интерфейса с информацией о доступных нодах в кластере и включённой политикой.*
+1. *В качестве решения домашнего задания приложите скриншоты из веб-интерфейса с информацией о доступных нодах в кластере и включённой политикой.*
 
-Также приложите вывод команды с двух нод:
+2. Также приложите вывод команды с двух нод:
 
 ```shell
 $ rabbitmqctl cluster_status
 ```
 
-Для закрепления материала снова запустите скрипт producer.py и приложите скриншот выполнения команды на каждой из нод:
+3. Для закрепления материала снова запустите скрипт producer.py и приложите скриншот выполнения команды на каждой из нод:
 
 ```shell
 $ rabbitmqadmin get queue='hello'
 ```
 
-После чего попробуйте отключить одну из нод, желательно ту, к которой подключались из скрипта, затем поправьте параметры подключения в скрипте consumer.py на вторую ноду и запустите его.
+4. После чего попробуйте отключить одну из нод, желательно ту, к которой подключались из скрипта, затем поправьте параметры подключения в скрипте consumer.py на вторую ноду и запустите его.
 
-*Приложите скриншот результата работы второго скрипта.*
+## Ответ
+
+1. ![image](https://user-images.githubusercontent.com/117297288/221571912-d4b197ab-6fe2-466d-a052-9842212729cf.png)
+
+![image](https://user-images.githubusercontent.com/117297288/221572255-7dc17570-9bbb-4e79-9ccd-ca609d2d1227.png)
+
+2. ![image](https://user-images.githubusercontent.com/117297288/221572345-e00b8493-8748-4a67-b5ec-136dbae15b45.png)
+
+![image](https://user-images.githubusercontent.com/117297288/221572380-5b07d3b4-a3d3-43c0-8454-2c713d4d9fd8.png)
+
+3. ![image](https://user-images.githubusercontent.com/117297288/221572547-72bba6e2-fd17-42b2-8e8f-cbfd8270d82d.png)
+
+![image](https://user-images.githubusercontent.com/117297288/221574508-aa10ca0b-188b-4652-98fb-c7ab39fd17fd.png)
+
+```py
+#!/usr/bin/env python3
+# coding=utf-8
+import pika
+credentials = pika.PlainCredentials('bdi', 'qwe123')
+connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.0.18','5672', '/', credentials))
+channel = connection.channel()
+channel.queue_declare(queue='hello')
+def callback(ch, method, properties, body):
+  print(" [x] Received %r" % body)
+channel.basic_consume(queue='hello', on_message_callback=callback, auto_ack=True)
+channel.start_consuming()
+```
