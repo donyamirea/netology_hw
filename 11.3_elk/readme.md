@@ -54,7 +54,9 @@ root@deb10:~#
 
 Приведите скриншот интерфейса Kibana, на котором видны логи Nginx.
 
-`Ответ [ссылка на источник|скриншот (можно добавлять через гитхаб - автоматом генерится линк)](http://example.com)`
+![image](https://user-images.githubusercontent.com/117297288/221532766-fd33aac6-1016-433a-956b-c4007f054a7e.png)
+
+
 ---
 ### Задание 4. Filebeat
 Установите и запустите Filebeat. Переключите поставку логов Nginx с Logstash на Filebeat.
