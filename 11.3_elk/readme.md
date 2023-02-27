@@ -5,7 +5,13 @@
 
 Приведите скриншот команды 'curl -X GET 'localhost:9200/_cluster/health?pretty', сделанной на сервере с установленным Elasticsearch. Где будет виден нестандартный cluster_name.
 
-`Ответ [ссылка на источник|скриншот (можно добавлять через гитхаб - автоматом генерится линк)](http://example.com)`
+## Ответ
+Делал через https://opensearch.org
+curl проходить не хотел, сделал запрос через вебку 
+
+![image](https://user-images.githubusercontent.com/117297288/221481559-877eb66c-92dc-4478-96ce-7e01712068ab.png)
+
+
 ---
 
 ### Задание 2. Kibana
