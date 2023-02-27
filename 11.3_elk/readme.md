@@ -20,7 +20,7 @@ curl проходить не хотел, сделал запрос через в
 
 ## Ответ
 Делал через опенсерч, у них в "простой" установке идет свой дешборд
-запросик 'health' и 'health
+запросик 'health' и 'health?pretty'
 
 ![image](https://user-images.githubusercontent.com/117297288/221481559-877eb66c-92dc-4478-96ce-7e01712068ab.png)
 
