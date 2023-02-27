@@ -73,7 +73,7 @@ $ rabbitmqadmin get queue='hello'
 
 3. ![image](https://user-images.githubusercontent.com/117297288/221572547-72bba6e2-fd17-42b2-8e8f-cbfd8270d82d.png)
 
-![image](https://user-images.githubusercontent.com/117297288/221574508-aa10ca0b-188b-4652-98fb-c7ab39fd17fd.png)
+4. ![image](https://user-images.githubusercontent.com/117297288/221574508-aa10ca0b-188b-4652-98fb-c7ab39fd17fd.png)
 
 ```py
 #!/usr/bin/env python3
