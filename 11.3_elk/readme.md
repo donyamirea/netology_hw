@@ -11,7 +11,6 @@ curl проходить не хотел, сделал запрос через в
 
 ![image](https://user-images.githubusercontent.com/117297288/221481559-877eb66c-92dc-4478-96ce-7e01712068ab.png)
 
-
 ---
 
 ### Задание 2. Kibana
@@ -19,7 +18,12 @@ curl проходить не хотел, сделал запрос через в
 
 Приведите скриншот интерфейса Kibana на странице http://<ip вашего сервера>:5601/app/dev_tools#/console, где будет выполнен запрос GET /_cluster/health?pretty.
 
-`Ответ [ссылка на источник|скриншот (можно добавлять через гитхаб - автоматом генерится линк)](http://example.com)`
+## Ответ
+Делал через опенсерч, у них в "простой" установке идет свой дешборд
+запросик 'health' и 'health
+
+![image](https://user-images.githubusercontent.com/117297288/221481559-877eb66c-92dc-4478-96ce-7e01712068ab.png)
+
 ---
 ### Задание 3. Logstash
 Установите и запустите Logstash и Nginx. С помощью Logstash отправьте access-лог Nginx в Elasticsearch.
