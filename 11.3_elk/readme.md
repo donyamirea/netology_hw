@@ -7,9 +7,33 @@
 
 ## Ответ
 Делал через https://opensearch.org
-curl проходить не хотел, сделал запрос через вебку 
 
-![image](https://user-images.githubusercontent.com/117297288/221481559-877eb66c-92dc-4478-96ce-7e01712068ab.png)
+С ним было все не совсем так:
+
+```shell
+root@deb10:~# curl -XGET https://localhost:9200/_cluster/health?pretty=true -u admin:admin --insecure
+{
+  "cluster_name" : "my-cluster",
+  "status" : "green",
+  "timed_out" : false,
+  "number_of_nodes" : 2,
+  "number_of_data_nodes" : 2,
+  "discovered_master" : true,
+  "discovered_cluster_manager" : true,
+  "active_primary_shards" : 4,
+  "active_shards" : 8,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 0,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 100.0
+}
+root@deb10:~#
+```
+
 
 ---
 
@@ -20,7 +44,7 @@ curl проходить не хотел, сделал запрос через в
 
 ## Ответ
 Делал через опенсерч, у них в "простой" установке идет свой дешборд
-запросик 'health' и 'health?pretty'
+запросик 'health' и 'health?pretty', на первый взгляд, не различаются..
 
 ![image](https://user-images.githubusercontent.com/117297288/221481559-877eb66c-92dc-4478-96ce-7e01712068ab.png)
 
