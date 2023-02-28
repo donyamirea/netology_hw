@@ -34,7 +34,7 @@
 
 Последний раз UML был в вузе 3 года назад, прошу не судить строго :)
 
-<screenshot>
+![image](https://user-images.githubusercontent.com/117297288/221763219-7c09be3f-9885-41fc-8d17-6766caaca31d.png)
 
 ---
 ### Задание 3. SQL vs NoSQL
